@@ -8,7 +8,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 1. **WiFi Ad-hoc (IBSS)** - Working
 2. **Bluetooth PAN** - Partially working
-3. **LoRa (RN2483)** - In progress via Elixir apps
+3. **LoRa (RN2903)** - In progress via Elixir apps
 
 ### Academic Context
 
@@ -68,7 +68,7 @@ D2dResponder.status()
 
 **Both apps use:**
 - `circuits_uart` for serial communication
-- RN2483 AT command protocol (`mac pause`, `radio tx <hex>`, `radio rx <timeout>`)
+- RN2903 AT command protocol (`mac pause`, `radio tx <hex>`, `radio rx <timeout>`)
 - File logging for field data collection (TSV format with timestamps)
 
 ## Shell Scripts (WiFi/Bluetooth)
@@ -104,7 +104,7 @@ ls /dev/ttyACM*
 # Test serial (57600 baud, CR+LF line endings):
 picocom -b 57600 --omap crcrlf /dev/ttyACM0
 
-# Key RN2483 commands:
+# Key RN2903 commands:
 # sys get ver     - Get firmware version
 # mac pause       - Pause LoRaWAN stack for raw LoRa
 # radio tx <hex>  - Transmit hex data
